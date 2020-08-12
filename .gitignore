@@ -7,4 +7,6 @@ SearchImage/.idea
 .idea
 *.iml
 
+*.mvn
+
 target
