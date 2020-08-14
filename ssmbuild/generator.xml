@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+    <property name="beginningDelimiter" value="`"/>
+    <property name="endingDelimiter" value="`"/>
+
+    <!-- 通用mapper所在目录 -->
+    <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+      <property name="mappers" value="club.banyuan.my.mapper.MyMapper"/>
+    </plugin>
+
+    <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+      connectionURL="jdbc:mysql://localhost:3306/ssmbuild?useSSL=false&amp;serverTimezone=UTC"
+      userId="root"
+      password="ych417130">
+      <!--      解决生成实体类错误或者生成其他数据库表单实体类的标签-->
+      <property name="nullCatalogMeansCurrent" value="true"/>
+    </jdbcConnection>
+
+    <!-- 对应生成的pojo所在包 -->
+    <!-- 会自动生成entity包-->
+    <javaModelGenerator targetPackage="club.banyuan.entity" targetProject="src/main/java"/>
+
+    <!-- 对应生成的mapper所在目录 -->
+    <!-- 同理-->
+    <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+    <!-- 配置mapper对应的java映射 -->
+    <!-- 同理-->
+    <javaClientGenerator targetPackage="club.banyuan.mapper" targetProject="src/main/java"
+      type="XMLMAPPER"/>
+
+    <!-- 数据库表 -->
+    <!-- 代码生成器会根据这个配置生成实体类，持久层接口，mapper配置文件-->
+    <table tableName="Books"></table>
+
+  </context>
+</generatorConfiguration>

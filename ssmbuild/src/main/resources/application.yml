@@ -1,0 +1,29 @@
+#springboot 集成 Mybatis 环境
+#pojo 别名扫描包
+mybatis:
+  type-aliases-package: club.banyuan.entity
+  mapper-locations: classpath:club/banyuan/mapper/*Mapper.xml
+#  添加数据量的链接信息
+spring:
+  thymeleaf:
+    cache: false
+#    prefix: classpath:/templates/
+#    suffix: .html
+#    encoding: UTF-8
+#    content-type: text/html
+#    mode: HTML5
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ssmbuild?&useSSL=false&serverTimezone=UTC
+    username: root
+    password: ych417130
+
+
+#server:
+#  port: 8080
+
+
+
+
+
+
