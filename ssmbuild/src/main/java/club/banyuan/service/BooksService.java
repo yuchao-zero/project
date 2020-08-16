@@ -10,4 +10,5 @@ public interface BooksService {
   public int update(Books book);
   public Books findBookById(int id);
   public List<Books> findAll();
+  public Books findBookByBookName(String name);
 }

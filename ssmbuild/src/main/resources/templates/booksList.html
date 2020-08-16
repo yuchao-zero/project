@@ -2,16 +2,56 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>书籍展示</title>
+  <!--  BootStrap美化界面-->
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet">
 </head>
 <body>
-<table>
-  <tr th:each="book : ${books}">
-    <td th:text="${book.bookid}"></td>
-    <td th:text="${book.bookname}"></td>
-    <td th:text="${book.bookcounts}"></td>
-    <td th:text="${book.detail}"></td>
-  </tr>
-</table>
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <div class="page-header">
+        <h1>
+          <small>书籍列表 —————— 显示所有书籍</small>
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 column">
+        <a href="toAddBook" class="btn btn-primary">新增书籍</a>
+      </div>
+    </div>
+  </div>
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <table class="table table-hover table-striped">
+        <thead>
+        <tr>
+          <th>书籍编号</th>
+          <th>书籍名称</th>
+          <th>书籍数量</th>
+          <th>书籍详情</th>
+          <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="book : ${books}">
+          <td th:text="${book.bookid}"></td>
+          <td th:text="${book.bookname}"></td>
+          <td th:text="${book.bookcounts}"></td>
+          <td th:text="${book.detail}"></td>
+          <td>
+            <!--            <a th:href="@{'/toUpdate/'+${book.bookid}}">修改</a>-->
+            <a th:href="@{/toUpdate(id=${book.bookid})}">修改</a>
+            &nbsp;| &nbsp;
+            <a th:href="@{/deleteBook(id=${book.bookid})}">删除</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 </body>
 </html>

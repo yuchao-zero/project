@@ -6,6 +6,7 @@ public class Books {
     /**
      * 书id
      */
+    @Id
     @Column(name = "bookID")
     private Integer bookid;
 

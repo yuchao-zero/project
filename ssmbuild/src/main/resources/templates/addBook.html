@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>新增书籍</title>
+  <!--  BootStrap美化界面-->
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <div class="page-header">
+        <h1>
+          <small>新增书籍</small>
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <form action="addBook" method="post">
+    <div class="form-group">
+      <label >书籍名称</label>
+      <input type="text" class="form-control" name="bookname" required >
+    </div>
+    <div class="form-group">
+      <label >书籍数量</label>
+      <input type="text" class="form-control" name="bookcounts" required>
+    </div>
+    <div class="form-group">
+      <label >书籍详情</label>
+      <input type="text" class="form-control" name="detail" required>
+    </div>
+    <div class="form-group">
+      <input type="submit" class="form-control" value="添加">
+    </div>
+  </form>
+</div>
+</body>
+</html>
