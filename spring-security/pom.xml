@@ -32,11 +32,13 @@
     </dependency>
 
 <!--    security-->
+<!--    核心包含有aop，意味着可以采用横切技术，增强功能-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
 
+<!--    thymeleaf整合springsecurity-->
     <dependency>
       <groupId>org.thymeleaf.extras</groupId>
       <artifactId>thymeleaf-extras-springsecurity5</artifactId>

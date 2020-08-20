@@ -15,7 +15,8 @@
     <div class="ui segment">
 
         <div style="text-align: center">
-            <h1 class="header">登录</h1>
+<!--            <h1 class="header">登录</h1>-->
+            <h1 class="header" th:text="#{login.tip}">Sign in</h1>
         </div>
 
         <div class="ui placeholder segment">
@@ -24,23 +25,28 @@
                     <div class="ui form">
                         <form th:action="@{/toLogin}" method="post">
                             <div class="field">
-                                <label>Username</label>
+<!--                                <label>Username</label>-->
                                 <div class="ui left icon input">
-                                    <input type="text" placeholder="Username" name="username">
+                                    <input type="text" th:placeholder="#{login.userName}" name="username">
                                     <i class="user icon"></i>
                                 </div>
                             </div>
                             <div class="field">
-                                <label>Password</label>
+<!--                                <label>Password</label>-->
                                 <div class="ui left icon input">
-                                    <input type="password" name="password">
+                                    <input type="password" name="password" th:placeholder="#{login.password}">
                                     <i class="lock icon"></i>
                                 </div>
                             </div>
+<!--                            <div class="field">-->
+<!--                                <input type="checkbox" name="remember">记住我-->
+<!--                            </div>-->
                             <div class="field">
-                                <input type="checkbox" name="remember">记住我
+                                <label>
+                                    <input type="checkbox" value="remember-me"> [[#{login.remember}]]
+                                </label>
                             </div>
-                            <input type="submit" class="ui blue submit button"/>
+                          <button type="submit" class="ui blue submit button">[[#{login.btn}]]</button>
                         </form>
                     </div>
                 </div>
@@ -48,14 +54,16 @@
         </div>
 
         <div style="text-align: center">
-            <div class="ui label">
-                </i>注册
-            </div>
+<!--            <div class="ui label">-->
+<!--                </i>注册-->
+<!--            </div>-->
+            <a class="btn btn-sm" th:href="@{/toLogin(l='zh_CN')}">中文</a>
+            <a class="btn btn-sm" th:href="@{/toLogin(l='en_US')}">English</a>
             <br><br>
-            <small>blog.kuangstudy.com</small>
+            <small>club.banyuan.com</small>
         </div>
         <div class="ui segment" style="text-align: center">
-            <h3>Spring Security Study by 秦疆</h3>
+            <h3>Spring Security Study </h3>
         </div>
     </div>
 
