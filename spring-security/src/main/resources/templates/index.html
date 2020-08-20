@@ -31,6 +31,7 @@
           <a class="item">
             <i class="address card icon"></i>
             用户名：<span sec:authentication="principal.username"></span>
+<!--            使用thymeleaf-extras-spring5不用降级springboot版本，获取用户角色princial.authorities-->
             角色：<span sec:authentication="principal.authorities"></span>
           </a>
         </div>
