@@ -6,11 +6,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-/**
- * @author :yu
- * @description : TODO
- * @date :2020/8/12 09:27
- */
 // 开启WebSecurity模式
 @EnableWebSecurity
 //WebSecurityConfigurerAdapter 自定义security策略

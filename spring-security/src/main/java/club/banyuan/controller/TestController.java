@@ -4,11 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-/**
- * @author :yu
- * @description : TODO
- * @date :2020/8/12 00:08
- */
 @Controller
 public class TestController {
 
